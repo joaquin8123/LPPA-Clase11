@@ -1,0 +1,152 @@
+main {
+    background: url(./assets/img/fondo.jpg) no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
+}
+h1{
+    margin: 0;
+    color: #ffff;
+    text-align: center;
+}
+p{
+    margin: 0;
+    color: #ff0000;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+}
+header {
+    background-color: rgba(34, 21, 204, 0.87);
+    margin-top:0;
+    padding: 0;
+    height: auto;
+}
+
+footer{
+    background-color: rgba(23, 12, 177, 0.87);
+    margin-bottom:0;
+    padding: 0;
+    height: auto;
+    bottom: 100%;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container input{
+    margin: 15px;
+    border-radius: 7px;
+    text-align: center;
+    height: 20px;
+    display: flex;
+    flex-flow: column;
+}
+
+.formulario{
+    height: 750px;
+    width: 500px;
+    border: 1px solid #ffff;
+    background-color: rgb(211, 211, 211);
+    opacity: 0.9;
+}
+
+.form-container{
+    margin: 20px;
+    display: flex;
+    flex-flow: row;
+    margin-right: 10px;
+    justify-content: center;
+}
+.form-container label{
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+}
+.form-container-div{
+    width: 52px;
+    margin-right: 15px;
+}
+.hiddenError{
+    display: none;
+}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-p{
+    color: #1eff00;
+}
+
+@media all and (max-width: 475px) {
+    
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 400px;
+        margin: 0;
+        overflow:scroll;
+        
+    }
+
+    .formulario{
+        max-width: 300px;
+        border: 1px solid #ffff;
+        background-color: rgb(211, 211, 211);
+        opacity: 0.9;
+        height: auto;
+        margin-top: 200px;
+    }
+
+    .form-container{
+        margin: 0px;
+        display: flex;
+        flex-flow: column;
+        margin-right: 10px;
+        justify-content: center;
+        width: 256px;
+    }
+    .form-container label{
+        display: block;
+    }
+
+    .form-container-div{
+        width: 52px;
+        margin-right: 15px;
+    }
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteo finalissima</title>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="form-validations.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Ganate una entrada completando el siguiente formulario</h1>
+    </header>
+    <main>
+        <section>
+            <div class="container">
+                <form class="formulario" action="javascript:void(0);">
+                    <div class="form-container">
+                        <div>
+                            <input type="text" id="nombre" placeholder="Nombre">
+                            <p id="nombreError" class="hiddenError">El nombre debe tener al menos 3 letras</p>
+                        </div>
+                        <div>
+                            <input type="text" id="apellido" placeholder="Apellido">
+                            <p id="apellidoError" class="hiddenError">El apellido debe tener al menos 3 letras</p>
+                        </div>
+                    </div>
+                    <div class="form-container">
+                        <div>
+                            <input type="text" id="email" placeholder="Email">
+                            <p id="emailError" class="hiddenError">Email invalido</p>
+                        </div>
+                        <div>
+                            <input type="text" id="edad" placeholder="Edad">
+                            <p id="edadError" class="hiddenError">Numero enteros 0-99</p>
+                        </div>
+                    </div>
+                    <fieldset class="form-container">
+                        <legend>Sexo:</legend>
+                    
+                        <div class="form-container-div">
+                          <input type="radio" id="hombre" value="hombre">
+                          <label for="hombre">Hombre</label>
+                        </div>
+                    
+                        <div lass="form-container-div">
+                          <input type="radio" id="mujer" value="mujer">
+                          <label for="mujer">Mujer</label>
+                        </div>
+                    
+                        <div lass="form-container-div">
+                          <input type="radio" id="otro" value="otro">
+                          <label for="otro">Otro</label>
+                        </div>
+                    </fieldset>
+                    <p id="sexoError" class="hiddenError">Debe seleccionar un sexo</p>
+                    <fieldset class="form-container">
+                        <legend>Seleccione cuales de estos jugadores haran un gol:</legend>
+                    
+                        <div class="form-container-div">
+                          <input type="checkbox" id="jugador1" name="jugador1"
+                                 checked>
+                          <label for="jugador1">Messi</label>
+                        </div>
+                    
+                        <div class="form-container-div">
+                          <input type="checkbox" id="jugador2" name="jugador2">
+                          <label for="jugador2">De Paul</label>
+                        </div>
+                        <div class="form-container-div">
+                            <input type="checkbox" id="jugador3" name="jugador3">
+                            <label for="jugador3">Verrati</label>
+                        </div>
+                    </fieldset>
+                    <p id="jugadorError" class="hiddenError">Debe seleccionar al menos 1 jugador</p>
+                    <div class="form-container">
+                        <label for="pais">Seleccione su pais:</label>
+    
+                        <select name="paises" id="pais">
+                            <option value="null" selected>Selecciona un pais</option>
+                            <option value="argentina">Argentina</option>
+                            <option value="brasil">Brasil</option>
+                            <option value="chile">Chile</option>
+                            <option value="uruguay">Uruguay</option>
+                        </select>
+                    </div>
+                    <p id="paisError" class="hiddenError">Debe seleccionar el pais</p>
+                    <div class="form-container">
+                        <label for="comentario">Comentario</label>
+                        <textarea name="comentario" id="comentario" cols="40" rows="5"></textarea>
+                    </div>
+                    <div class="form-container">
+                        <button id="button-submit" type="button" onclick="submit()">Enviar</button>    
+                    </div>
+                </form>
+            </div>
+                <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p id="content" class="modal-p">Su formulario se envio correctamente.</p>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <footer>
+        <h1>Todos Los Derechos Reservados © 2022</h1>
+    </footer>
+</body>
+</html>
