@@ -32,13 +32,16 @@ window.onload = function(){
         validarPais()
         if( validarApellido() && validarNombre() && validarEmail() && validarEdad() && validarSexo() && validarJugador() && validarPais()){
             fetch(`https://curso-dev-2021.herokuapp.com/newsletter?name=${nombre.value}&apellido=${apellido.value}&email=${email.value}&pais=${pais.value}&edad=${edad.value}`)
-                .then(response => response.json())
-                .then(data => {
-                    console.log(data,modalContent,modal)
-                    modal.style.display = "block";
-                    modalContent.innerHTML= `Suscripcion enviada con exito! \n ${JSON.stringify(data)}`
-                    span.onclick = function() {
-                        modal.style.display = "none";
+                .then(response => {
+                    if(response.status == 200){
+                        response.json()
+                        .then(data => {
+                            modal.style.display = "block";
+                            modalContent.innerHTML= `Suscripcion enviada con exito! \n ${JSON.stringify(data)}`
+                            span.onclick = function() {
+                                modal.style.display = "none";
+                            }
+                        })
                     }
                 })
                 .catch(err => console.log('ERROR', err))
